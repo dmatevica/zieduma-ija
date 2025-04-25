@@ -1,16 +1,93 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="lv">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <title>Sākums - Ziedu Maģija</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <header>
+    <div class="logo">Ziedu Maģija</div>
+    <img src="https://www.canva.com/design/DAGhDOndZFk/MF50zYYGTsvuuzHwJ_RfCQ/edit?utm_content=DAGhDOndZFk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" alt="Ziedu Maģija logo" width="50" height="50">"
+    <nav>
+      <ul>
+        <li><a href="index.html">Sākums</a></li>
+        <li><a href="galerija.html">Galerija</a></li>
+        <li><a href="sudzibas.html">Sūdzības</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h1>Laipni lūdzam Ziedu Maģijā</h1>
+    <p>Jūsu ziedu pasaule vienā vietā</p>
+  </section>
+
+  <section class="container">
+    <h2>Populārākie ziedi</h2>
+    <div class="product">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Lilium_candidum1.jpg" alt="Baltās lilijas">
+      <div>
+        <div class="product-title">Baltās lilijas</div>
+        <div class="price">€12,00</div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2017/06/20/19/22/bouquet-2422319_960_720.jpg" alt="The best wishes">
+      <div>
+        <div class="product-title">The best wishes</div>
+        <div class="price">€28,25</div>
+      </div>
+    </div>
+  </section>
+
+ 
+</body>
 </html>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Sūdzības - Ziedu Maģija</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function iesniegtSudzibu(event) {
+      event.preventDefault();
+      document.getElementById("sudzibu-forma").style.display = "none";
+      document.getElementById("paldies-zina").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+ 
+
+  <section class="container">
+    <h2>Sūdzību forma</h2>
+    <form id="sudzibu-forma" onsubmit="iesniegtSudzibu(event)">
+      <label for="vards">Vārds:</label>
+      <input type="text" id="vards" name="vards" required>
+
+      <label for="epasts">E-pasts:</label>
+      <input type="email" id="epasts" name="epasts" required>
+
+      <label for="temats">Temats:</label>
+      <input type="text" id="temats" name="temats" required>
+
+      <label for="zina">Sūdzība:</label>
+      <textarea id="zina" name="zina" rows="4" required></textarea>
+
+      <button type="submit">Iesniegt</button>
+    </form>
+
+    <div id="paldies-zina" style="display:none;">
+      <h3>Paldies, sūdzība ir iesniegta!</h3>
+    </div>
+  </section>
+
+  <footer>
+    <p>Darba laiks: P.-Pk. 10:00-18:00, S. 09:00-19:00, Sv. 10:00-16:00</p>
+    <p>Adrese: Brīvības iela 123, Rīga | +371 12345678 | info@ziedumagija.lv</p>
+  </footer>
+</body>
+</html>
+
