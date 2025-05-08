@@ -1,93 +1,113 @@
 <!DOCTYPE html>
 <html lang="lv">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Sākums - Ziedu Maģija</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sākums - Ziedu Maģija</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header>
-    <div class="logo">Ziedu Maģija</div>
-    <img src="https://www.canva.com/design/DAGhDOndZFk/MF50zYYGTsvuuzHwJ_RfCQ/edit?utm_content=DAGhDOndZFk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" alt="Ziedu Maģija logo" width="50" height="50">"
-    <nav>
-      <ul>
-        <li><a href="index.html">Sākums</a></li>
-        <li><a href="galerija.html">Galerija</a></li>
-        <li><a href="sudzibas.html">Sūdzības</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">Ziedu Maģija</div>
+        <nav>
+            <a onclick="showSection('sakums')">Sākums</a>
+            <a onclick="showSection('galerija')">Galerija</a>
+            <a onclick="showSection('sudzibas')">Sūdzības</a>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Laipni lūdzam Ziedu Maģijā</h1>
-    <p>Jūsu ziedu pasaule vienā vietā</p>
-  </section>
+    <main>
+        <!-- Sākums -->
+        <section id="sakums" class="active">
+            <div class="hero">
+                <h1>Ziedu Maģija</h1>
+                <p>Daba Tavās rokās – ziedi katram mirklim!</p>
+            </div>
 
-  <section class="container">
-    <h2>Populārākie ziedi</h2>
-    <div class="product">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Lilium_candidum1.jpg" alt="Baltās lilijas">
-      <div>
-        <div class="product-title">Baltās lilijas</div>
-        <div class="price">€12,00</div>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/06/20/19/22/bouquet-2422319_960_720.jpg" alt="The best wishes">
-      <div>
-        <div class="product-title">The best wishes</div>
-        <div class="price">€28,25</div>
-      </div>
-    </div>
-  </section>
+            <section class="container">
+                <div class="product">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Lilium_candidum1.jpg" alt="Baltās lilijas">
+                    <div>
+                        <div class="product-title">Baltās lilijas</div>
+                        <div class="price">€12,00</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/20/19/22/bouquet-2422319_960_720.jpg" alt="The best wishes">
+                    <div>
+                        <div class="product-title">The best wishes</div>
+                        <div class="price">€28,25</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
 
- 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-  <meta charset="UTF-8">
-  <title>Sūdzības - Ziedu Maģija</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function iesniegtSudzibu(event) {
-      event.preventDefault();
-      document.getElementById("sudzibu-forma").style.display = "none";
-      document.getElementById("paldies-zina").style.display = "block";
-    }
-  </script>
-</head>
-<body>
- 
+  <!-- Galerija -->
+    <section id="galerija">
+        <div class="gallery">
+            <img src="https://www.dundaga.lv/files/images/2020/3/3/Dundaga_dsc_4665_-xl.jpeg" alt="1">
+            <img src="https://imageproxy.wolt.com/assets/673208db308c8149ae82e91f" alt="2">
+            <img src="https://img.abc.lv/infopage/photos/b/7/puku-bode-veikals-113923_b72p5_ap_01_800x400.jpg" alt="3">
+            <img src="https://flowersexpress.lv/wp-content/uploads/2021/04/9B37C89C-A8DB-4D64-AF4E-2E40E49EEFE2-scaled-610x813.jpeg.webp" alt="4">
+            <img src="https://img.pilseta24.lv/sr/logos/c/a/solo-veikals-333753_capture_286x209.jpg" alt="5">
+            <img src="https://img.zl.lv/infopage/photos/1/0/kristas-ziedi-sia_1000231294_ap_01_800x400.jpg" alt="6">
+            <img src="https://imageproxy.wolt.com/assets/6732092936f1e239ba1e6188" alt="7">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyMK5ACNsPJWAV8CEHSV_i01UjZXI2bDNbxg&s" alt="8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufZwC1uWVy85_SIelMj5znD2EViGiXFGs803ZXlU-afWpm7f2CrUDNDgUbbvweq2VYyo&usqp=CAU" alt="9">
+            <img src="https://img.visaigimenei.lv/infopage/photos/i/m/milli-pro-ziedu-veikals_img-20240125-wa0036-1-_2000x1500.jpg" alt="10">
 
-  <section class="container">
-    <h2>Sūdzību forma</h2>
-    <form id="sudzibu-forma" onsubmit="iesniegtSudzibu(event)">
-      <label for="vards">Vārds:</label>
-      <input type="text" id="vards" name="vards" required>
+            <div class="video">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/xSWCU2tJ7AI?si=3RxJaRN2hjGl5i9l" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
-      <label for="epasts">E-pasts:</label>
-      <input type="email" id="epasts" name="epasts" required>
+        <!-- Sūdzību forma -->
+        <section id="sudzibas">
+            <div class="form-container">
+                <form id="complaintForm">
+                    <label for="name">Vārds:</label>
+                    <input type="text" id="name" name="name" required>
 
-      <label for="temats">Temats:</label>
-      <input type="text" id="temats" name="temats" required>
+                    <label for="email">E-pasts:</label>
+                    <input type="email" id="email" name="email" required>
 
-      <label for="zina">Sūdzība:</label>
-      <textarea id="zina" name="zina" rows="4" required></textarea>
+                    <label for="message">Sūdzība:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Iesniegt</button>
-    </form>
+                    <button type="submit">Iesniegt</button>
+                </form>
+                <div id="thankYouMessage" style="display: none;">
+                    <h2>Paldies, sūdzība ir iesniegta!</h2>
+                </div>
+            </div>
+        </section>
 
-    <div id="paldies-zina" style="display:none;">
-      <h3>Paldies, sūdzība ir iesniegta!</h3>
-    </div>
-  </section>
-
-  <footer>
-    <p>Darba laiks: P.-Pk. 10:00-18:00, S. 09:00-19:00, Sv. 10:00-16:00</p>
-    <p>Adrese: Brīvības iela 123, Rīga | +371 12345678 | info@ziedumagija.lv</p>
+    </main>
+ <footer>
+    <p>Darba laiks:
+        P.-Pk. 10:00-18:00, 
+        S. 09:00-19:00, 
+        Sv. 10:00-16:00</p>
+    <p>Adrese: Brīvības iela 123, Rīga
+        | +371 12345678
+        |  info@ziedumagija.lv
+    <p> Piegādes cenas ar kurjeru
+    0 – 4 km  € 2,90
+    4 – 7 km  € 3,90
+    7 – 12 km  € 5,90
+    12 – 18 km  € 9,99
+    18 – 25 km  € 15,00
+    25 – 33 km  € 20,00
+    33 – 38 km  € 25,00
+    38- 45 km  € 30,00
+    </p>
   </footer>
 </body>
 </html>
-
